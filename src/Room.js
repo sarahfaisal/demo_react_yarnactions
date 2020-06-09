@@ -1,16 +1,19 @@
 
 
 import React, { useState } from 'react';
+import './Room.css'
+
 
 function Room() {
 
-    //const state = useState(true);
-    //console.log("State = ",state);
+    
     let [isLit, setLit] = useState(false);
     let [age , setAge] = useState(24);
     
+    
+
     return (
-    <div>        
+    <div className={`room ${isLit? "lit": "dark"}`}> 
         This Room is {isLit? "lit": "dark"}
         <br/>
         Age: {age}
