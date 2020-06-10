@@ -20,7 +20,7 @@ function Room() {
         <button onClick={()=> setLit(!isLit) } >Light on</button>
         <br/>
         <button onClick={ ()=> {
-                        console.log("Increase age arrow function");
+                        console.log("Increase temp arrow function");
                         setTemp(++temp);
                         }}>
             Increase Temp
