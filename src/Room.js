@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import './Room.css'
 
@@ -8,7 +6,7 @@ function Room() {
 
     
     let [isLit, setLit] = useState(false);
-    let [age , setAge] = useState(24);
+    let [temp , setTemp] = useState(27);
     
     
 
@@ -16,16 +14,16 @@ function Room() {
     <div className={`room ${isLit? "lit": "dark"}`}> 
         This Room is {isLit? "lit": "dark"}
         <br/>
-        Age: {age}
+        Temp: {temp}
         <br/>
         <button onClick={()=> setLit(!isLit) } >light off</button>
         <button onClick={()=> setLit(!isLit) } >Light on</button>
         <br/>
         <button onClick={ ()=> {
                         console.log("Increase age arrow function");
-                        setAge(++age);
+                        setTemp(++temp);
                         }}>
-            Increase Age
+            Increase Temp
         </button>
     </div>
     );
